@@ -122,6 +122,10 @@ header {
 .contact:focus {
   color: var(--accent-color);
 }
+.contacts-icon {
+  margin-right: 10px;
+  fill: currentColor;
+}
 
 /*Hero Section */
 .hero-section {
@@ -198,8 +202,7 @@ h1 {
   height: 120px;
 }
 .advantages-logo {
-  display: block;
-  margin: 25px auto;
+  margin: 25px 102px;
 }
 
 /*Examples */
@@ -238,6 +241,35 @@ h1 {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+}
+.social-icons {
+  color: var(--primary-text-color);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.social-icons:not(:last-child) {
+  margin-right: 10px;
+}
+.social-icon {
+  fill: currentColor;
+}
+.social-contacts {
+  margin: 16px 32px 30px 32px;
+}
+.social-link {
+  color: var(--primary-text-color);
+  display: block;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  text-align: center;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+.social-link:hover {
+  color: var(--secondary-color);
+  background-color: var(--accent-color);
 }
 .options {
   list-style: none;
@@ -278,6 +310,7 @@ h1 {
   line-height: 1.1875;
   text-align: center;
   letter-spacing: 0.03em;
+  margin-bottom: 16px;
 }
 .team-title {
   margin-bottom: 10px;
@@ -342,20 +375,39 @@ address {
 }
 
 /*Клиенты */
-.clients-icon,
-.social-contacts {
+.social-contacts,
+.clients-icon {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 .client:not(:last-child) {
   margin: 30px;
 }
 .client {
-  border: 1px solid #afb1b8;
-  box-sizing: border-box;
-  border-radius: 4px;
+  text-align: center;
+  padding: 16px 32px 16px 32px;
+}
+.social-icon {
+  color: currentColor;
+}
+.client-link {
+  color: var(--primary-text-color);
+}
+.clients-icon {
+  margin-top: 50px;
+}
+.client-link {
+  padding: 16px 32px 16px 32px;
+  display: block;
   width: 170px;
   height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+.client-link:hover {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
 }
 
 /* Portfolio */
