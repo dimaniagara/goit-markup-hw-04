@@ -109,6 +109,8 @@ header {
   display: flex;
 }
 .contact {
+  display: flex;
+  align-items: center;
   text-decoration: none;
   font-weight: 500;
   font-size: 14px;
@@ -129,6 +131,8 @@ header {
 
 /*Hero Section */
 .hero-section {
+  max-width: 1600px;
+  margin: 0 auto;
   text-align: center;
   padding: 200px 0;
   background: url("../images/Overlay.jpg"), rgba(47, 48, 58, 0.4);
@@ -198,14 +202,14 @@ h1 {
   width: 270px;
 }
 .advantages-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: var(--third-color);
   border-radius: 4px;
   margin-bottom: 30px;
   width: 270px;
   height: 120px;
-}
-.advantages-logo {
-  margin: 25px 102px;
 }
 
 /*Examples */
@@ -244,6 +248,7 @@ h1 {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+  background-color: #ffffff;
 }
 .social-icons {
   color: var(--primary-text-color);
@@ -255,13 +260,9 @@ h1 {
   margin-right: 10px;
 }
 .social-icon {
-  fill: currentColor;
-}
-.social-contacts {
-  margin: 16px 32px 30px 32px;
+  fill: #afb1b8;
 }
 .social-link {
-  color: var(--primary-text-color);
   display: block;
   width: 44px;
   height: 44px;
@@ -269,6 +270,9 @@ h1 {
   text-align: center;
   padding-top: 12px;
   padding-bottom: 12px;
+}
+.social-link:hover .social-icon {
+  fill: currentColor;
 }
 .social-link:hover {
   color: var(--secondary-color);
@@ -387,10 +391,13 @@ footer {
   padding-bottom: 12px;
   margin-top: 20px;
 }
-.join-link:hover {
+.social-icon-footer {
   color: var(--secondary-color);
+}
+.join-link:hover {
   background-color: var(--accent-color);
 }
+
 .social-icons:not(:last-child) {
   margin-right: 10px;
 }
@@ -412,6 +419,8 @@ address {
   color: var(--secondary-color);
 }
 .footer-list {
+  display: flex;
+  align-items: center;
   text-decoration: none;
   color: var(--primary-text-color);
 }
@@ -428,9 +437,6 @@ address {
 }
 .client {
   text-align: center;
-}
-.social-icon {
-  color: currentColor;
 }
 .client-link {
   color: var(--primary-text-color);
@@ -470,8 +476,10 @@ img {
   margin-bottom: 50px;
 }
 .secondary-button {
+  display: block;
   padding: 6px 22px;
   margin-right: 8px;
+  line-height: 26px;
   border: none;
   border-radius: 4px;
 }
@@ -488,6 +496,8 @@ img {
   color: var(--secondary-color);
   cursor: pointer;
   color: var(--secondary-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .options-list {
   display: flex;
