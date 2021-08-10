@@ -4,6 +4,7 @@
   --secondary-color: #ffffff;
   --third-color: #f5f4fa;
   --accent-color: #2196f3;
+  --logo-color: #afb1b8;
 }
 body {
   font-family: "Roboto", Arial, sans-serif;
@@ -135,7 +136,12 @@ header {
   margin: 0 auto;
   text-align: center;
   padding: 200px 0;
-  background: url("../images/Overlay.jpg"), rgba(47, 48, 58, 0.4);
+  background-image: linear-gradient(
+      to bottom,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/Overlay.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: left top;
@@ -251,7 +257,6 @@ h1 {
   background-color: #ffffff;
 }
 .social-icons {
-  color: var(--primary-text-color);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -259,10 +264,8 @@ h1 {
 .social-icons:not(:last-child) {
   margin-right: 10px;
 }
-.social-icon {
-  fill: #afb1b8;
-}
 .social-link {
+  color: var(--primary-text-color);
   display: block;
   width: 44px;
   height: 44px;
@@ -271,12 +274,15 @@ h1 {
   padding-top: 12px;
   padding-bottom: 12px;
 }
-.social-link:hover .social-icon {
-  fill: currentColor;
-}
 .social-link:hover {
   color: var(--secondary-color);
   background-color: var(--accent-color);
+}
+.social-icon {
+  fill: #afb1b8;
+}
+.social-link:hover .social-icon {
+  fill: currentColor;
 }
 .options {
   list-style: none;
@@ -340,6 +346,44 @@ h1 {
   list-style: none;
 }
 
+/*Клиенты */
+.social-contacts,
+.clients-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.client:not(:last-child) {
+  margin-right: 30px;
+}
+.client {
+  display: flex;
+}
+.clients-icon {
+  margin-top: 50px;
+}
+.client-link {
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-text-color);
+  padding: 16px 32px 16px 32px;
+  display: block;
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+.client-link:hover {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+.client-logo {
+  fill: var(--logo-color);
+}
+.client-link:hover .client-logo {
+  fill: currentColor;
+}
+
 /* footer */
 footer {
   padding: 60px 0;
@@ -370,7 +414,7 @@ footer {
 .join-title {
   font-weight: bold;
   font-size: 14px;
-  line-height: 18px;
+  line-height: 31px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--secondary-color);
@@ -378,6 +422,7 @@ footer {
 .join-list {
   display: flex;
   align-items: center;
+  margin-top: 20px;
 }
 .join-link {
   color: var(--third-color);
@@ -389,15 +434,14 @@ footer {
   text-align: center;
   padding-top: 12px;
   padding-bottom: 12px;
-  margin-top: 20px;
-}
-.social-icon-footer {
-  color: var(--secondary-color);
 }
 .join-link:hover {
   background-color: var(--accent-color);
 }
 
+.social-icon-footer {
+  fill: var(--secondary-color);
+}
 .social-icons:not(:last-child) {
   margin-right: 10px;
 }
@@ -423,38 +467,6 @@ address {
   align-items: center;
   text-decoration: none;
   color: var(--primary-text-color);
-}
-
-/*Клиенты */
-.social-contacts,
-.clients-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.client:not(:last-child) {
-  margin-right: 30px;
-}
-.client {
-  text-align: center;
-}
-.client-link {
-  color: var(--primary-text-color);
-}
-.clients-icon {
-  margin-top: 50px;
-}
-.client-link {
-  padding: 16px 32px 16px 32px;
-  display: block;
-  width: 170px;
-  height: 92px;
-  border: 1px solid #afb1b8;
-  border-radius: 4px;
-}
-.client-link:hover {
-  color: var(--accent-color);
-  border-color: var(--accent-color);
 }
 
 /* Portfolio */
@@ -499,6 +511,18 @@ img {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
+.option-link {
+  text-decoration: none;
+}
+.options {
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  box-sizing: border-box;
+}
+.options:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
 .options-list {
   display: flex;
   flex-wrap: wrap;
@@ -506,10 +530,12 @@ img {
   margin-right: -30px;
   margin-bottom: -30px;
 }
+.option-text {
+  color: #757575;
+}
 .options-list .options {
   margin-right: 30px;
   margin-bottom: 30px;
-  border: 1px solid #eeeeee;
   flex-basis: calc(100% / 3 - 30px);
 }
 .options-description-wrapper {
